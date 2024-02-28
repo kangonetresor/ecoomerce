@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <img src="{{ product.image }}" width="500px" height alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="text-warning display">
+                {{ product.title }}
+            </div>
+            <div class="text-danger">
+                Prix : {{ product.price }} F CFA
+            </div>
+            <div>
+                {{ product.description }}
+            </div>
+            <a href="#"><button class="btn btn-success">Acheter</button></a>
+            <!-- <a class="btn btn-primary" href="{% url 'index' %}">Revenir en arrière</a> -->
+            <a href="{% url 'index' %}" class="btn btn-info">Retour en arrière</a>
+        </div>
+
+
+    </div>
+
+{% endblock %}
+
+
